@@ -1,0 +1,149 @@
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+.masonry {
+  -webkit-transition-property: width, height;
+  -moz-transition-property: width, height;
+  -ms-transition-property: width, height;
+  -o-transition-property: width, height;
+  transition-property: width, height;
+}
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+  -moz-transition-property: left, right, top;
+  -ms-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  transition-property: left, right, top;
+}
+.tile_container {
+  max-width: 100%;
+  width: 900px;
+  min-width: 100%;
+  max-width: 100% !important;
+  padding: 0 0 0 0 !important;
+  float: left;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.tile_container [class~="tile"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px !important;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+}
+.tile_container [class*="%33"] {
+  width: 33%;
+}
+.tile_container [class*="autoX"] {
+  width: auto!important;
+}
+.tile_container [class*="oneX"] {
+  width: 55px;
+}
+.tile_container [class*="twoX"] {
+  width: 130px;
+}
+.tile_container [class*="threeX"] {
+  width: 205px;
+}
+.tile_container [class*="fourX"] {
+  width: 280px;
+}
+.tile_container [class*="fiveX"] {
+  width: 355px;
+}
+.tile_container [class*="sixX"] {
+  width: 430px;
+}
+.tile_container [class*="sevenX"] {
+  width: 505px;
+}
+.tile_container [class*="eightX"] {
+  width: 580px;
+}
+.tile_container [class*="nineX"] {
+  width: 655px;
+}
+.tile_container [class*="tenX"] {
+  width: 730px;
+}
+.tile_container [class*="elevenX"] {
+  width: 805px;
+}
+.tile_container [class*="twelveX"] {
+  width: 880px;
+}
+.tile_container [class*="Xauto"] {
+  height: 100%;
+}
+.tile_container [class*="Xone"] {
+  height: 55px;
+}
+.tile_container [class*="Xtwo"] {
+  height: 130px;
+}
+.tile_container [class*="Xthree"] {
+  height: 205px;
+}
+.tile_container [class*="Xfour"] {
+  height: 280px;
+}
+.tile_container [class*="Xfive"] {
+  height: 355px;
+}
+.tile_container [class*="Xsix"] {
+  height: 430px;
+}
+.tile_container [class*="Xseven"] {
+  height: 505px;
+}
+.tile_container [class*="Xeight"] {
+  height: 580px;
+}
+.tile_container [class*="Xnine"] {
+  height: 655px;
+}
+.tile_container [class*="Xten"] {
+  height: 730px;
+}
+.tile_container [class*="Xeleven"] {
+  height: 805px;
+}
+.tile_container [class*="Xtwelve"] {
+  height: 880px;
+}
+.tile_container .tile .container {
+  text-decoration: none !important;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.1), 0 0 3px 1px rgba(0, 0, 0, 0.25);
+  display: block;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.tile_container .tile .container h3 {
+  font-family: 'Bad Script', cursive;
+  line-height: 2;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  text-decoration: none !important;
+}
+.tile_container .tile .container:hover {
+  color: #999999;
+  text-decoration: none !important;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.1), 0 0 2px 1px #0089b3;
+}
+@media only screen and (max-width: 900px), (width: 900px) {
+  .tile_container .tile {
+    width: 50%;
+  }
+}

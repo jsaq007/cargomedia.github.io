@@ -1,0 +1,219 @@
+// Dimensions relative to containers width (Recommended 1X1)
+
+#Grid {
+	.grid_container(@grid_width: 0em, @columns: 12em, @gutter_width: 10/16em) {
+		@unit_spread: (@grid_width / @columns);
+		max-width: 100%;
+		width: @grid_width - 0em;
+		position: relative;
+		display: block;
+		float: left;
+		& [class~="span"] {
+			vertical-align: top;
+			max-width: 100%;
+			height: 100%;
+			display: block;
+			padding: @gutter_width/2;
+			box-sizing: border-box; //!!! Removed for correct sizing
+			float: left;
+			.clearfix();
+		}
+		// @group Width - Julian Querido 03/12/2012
+
+		& [class*="autoX"] {
+			width: auto!important;
+		}
+		& [class*="oneX"] {
+			width: (@unit_spread * 1) - 0em;
+		}
+		& [class*="twoX"] {
+			width: (@unit_spread * 2) - 0em;
+		}
+		& [class*="threeX"] {
+			width: (@unit_spread * 3) - 0em;
+		}
+		& [class*="fourX"] {
+			width: (@unit_spread * 4) - 0em;
+		}
+		& [class*="fiveX"] {
+			width: (@unit_spread * 5) - 0em;
+		}
+		& [class*="sixX"] {
+			width: (@unit_spread * 6) - 0em;
+		}
+		& [class*="sevenX"] {
+			width: (@unit_spread * 7) - 0em;
+		}
+		& [class*="eightX"] {
+			width: (@unit_spread * 8) - 0em;
+		}
+		& [class*="nineX"] {
+			width: (@unit_spread * 9) - 0em;
+		}
+		& [class*="tenX"] {
+			width: (@unit_spread * 10) - 0em;
+		}
+		& [class*="elevenX"] {
+			width: (@unit_spread * 11) - 0em;
+		}
+		& [class*="twelveX"] {
+			width: (@unit_spread * 12) - 0em;
+		}
+
+		// @end <<
+
+		// @group Height - Julian Querido 03/12/2012
+
+		& [class*="Xauto"] {
+			height: 100%;
+		}
+		& [class*="Xone"] {
+			height: (@unit_spread * 1) - 0em;
+		}
+		& [class*="Xtwo"] {
+			height: (@unit_spread * 2) - 0em;
+		}
+		& [class*="Xthree"] {
+			height: (@unit_spread * 3) - 0em;
+		}
+		& [class*="Xfour"] {
+			height: (@unit_spread * 4) - 0em;
+		}
+		& [class*="Xfive"] {
+			height: (@unit_spread * 5) - 0em;
+		}
+		& [class*="Xsix"] {
+			height: (@unit_spread * 6) - 0em;
+		}
+		& [class*="Xseven"] {
+			height: (@unit_spread * 7) - 0em;
+		}
+		& [class*="Xeight"] {
+			height: (@unit_spread * 8) - 0em;
+		}
+		& [class*="Xnine"] {
+			height: (@unit_spread * 9) - 0em;
+		}
+		& [class*="Xten"] {
+			height: (@unit_spread * 10) - 0em;
+		}
+		& [class*="Xeleven"] {
+			height: (@unit_spread * 11) - 0em;
+		}
+		& [class*="Xtwelve"] {
+			height: (@unit_spread * 12) - 0em;
+		}
+
+		// @end <<
+	}
+	.tile_container(@grid_width: 950/16, @columns: 12, @gutter_width: 10/16em) {
+		@unit_spread: (@grid_width) / @columns;
+		width: (@grid_width);
+		min-width: 100%;
+		max-width: 100% !important;
+		padding: 0 0 0 0 !important;
+		float: left;
+		display: block;
+		position: relative;
+		box-sizing: border-box;
+		& [class~="tile"] {
+			width: 100%;
+			max-width: 100%;
+			padding: @gutter_width/2 !important;
+			display: block;
+			box-sizing: border-box;
+			float: left;
+		}
+
+		// @group Width - Julian Querido 03/12/2012
+
+		& [class*="%33"] {
+			width: 33%;
+		}
+		& [class*="autoX"] {
+			width: auto!important;
+		}
+		& [class*="oneX"] {
+			width: (@unit_spread * 1) - @gutter_width;
+		}
+		& [class*="twoX"] {
+			width: (@unit_spread * 2) - @gutter_width;
+		}
+		& [class*="threeX"] {
+			width: (@unit_spread * 3) - @gutter_width;
+		}
+		& [class*="fourX"] {
+			width: (@unit_spread * 4) - @gutter_width;
+		}
+		& [class*="fiveX"] {
+			width: (@unit_spread * 5) - @gutter_width;
+		}
+		& [class*="sixX"] {
+			width: (@unit_spread * 6) - @gutter_width;
+		}
+		& [class*="sevenX"] {
+			width: (@unit_spread * 7) - @gutter_width;
+		}
+		& [class*="eightX"] {
+			width: (@unit_spread * 8) - @gutter_width;
+		}
+		& [class*="nineX"] {
+			width: (@unit_spread * 9) - @gutter_width;
+		}
+		& [class*="tenX"] {
+			width: (@unit_spread * 10) - @gutter_width;
+		}
+		& [class*="elevenX"] {
+			width: (@unit_spread * 11) - @gutter_width;
+		}
+		& [class*="twelveX"] {
+			width: (@unit_spread * 12) - @gutter_width;
+		}
+
+		// @end <<
+
+		// @group Height - Julian Querido 03/12/2012
+
+		& [class*="Xauto"] {
+			height: 100%;
+		}
+		& [class*="Xone"] {
+			height: (@unit_spread * 1) - @gutter_width;
+		}
+		& [class*="Xtwo"] {
+			height: (@unit_spread * 2) - @gutter_width;
+		}
+		& [class*="Xthree"] {
+			height: (@unit_spread * 3) - @gutter_width;
+		}
+		& [class*="Xfour"] {
+			height: (@unit_spread * 4) - @gutter_width;
+		}
+		& [class*="Xfive"] {
+			height: (@unit_spread * 5) - @gutter_width;
+		}
+		& [class*="Xsix"] {
+			height: (@unit_spread * 6) - @gutter_width;
+		}
+		& [class*="Xseven"] {
+			height: (@unit_spread * 7) - @gutter_width;
+		}
+		& [class*="Xeight"] {
+			height: (@unit_spread * 8) - @gutter_width;
+		}
+		& [class*="Xnine"] {
+			height: (@unit_spread * 9) - @gutter_width;
+		}
+		& [class*="Xten"] {
+			height: (@unit_spread * 10) - @gutter_width;
+		}
+		& [class*="Xeleven"] {
+			height: (@unit_spread * 11) - @gutter_width;
+		}
+		& [class*="Xtwelve"] {
+			height: (@unit_spread * 12) - @gutter_width;
+		}
+
+		// @end <<
+	}
+}

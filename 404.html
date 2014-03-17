@@ -2,10 +2,20 @@
 layout: default
 title: 404
 ---
+<!-- Included masonry js - http://masonry.desandro.com/ -->
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<script>
+	var container = document.querySelector('#tiles');
+	var msnry = new Masonry( container, {
+	  // options...
+	  itemSelector: '.tile',
+	  columnWidth: 200
+	});
+</script>
 
 <div class="wallpaper">
 	<h1 class="headline">404</h1>
-	<p class="catchphrase">Never gonna give you up</p>
+	<p class="catchphrase">What was it you wanted?</p>
 </div>
 <div class="rainbow">
 	<div class="rainbow-stripe blue">&nbsp;</div>
@@ -13,3 +23,24 @@ title: 404
 	<div class="rainbow-stripe red">&nbsp;</div>
 	<div class="rainbow-stripe orange">&nbsp;</div>
 </div>
+<article class="article sheet clearfix">
+	<h2>Tell me again so I know...</h2>
+	<div id="tiles" class="tile_container js-masonry">
+		{% for post in site.posts %}
+		<div class="tile fourX">
+			<a href="{{ post.url }}" class="container">
+				<h3>{{ post.title }}</h3>
+				{% if post.tags %}
+				<p class="post-tags tags nowrap">
+					{% for tag in post.tags %}
+					<span class="tag">{{ tag }}</span>
+					{% endfor %}
+				</p>
+				{% endif %}
+				<p class="post-meta">{% if post.date %}<time>{{ post.date | date_to_string }}</time>{% endif %} {% if post.owner %}by {{ post.owner }}{% endif %}
+				</p>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</article>
